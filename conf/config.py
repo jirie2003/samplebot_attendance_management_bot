@@ -25,15 +25,15 @@ DEFAULT_LANG = 'ja'
 TZone = "Asia/Tokyo"
 
 # account
-ADMIN_ACCOUNT = "admin@xxx.com"
-DOMAIN_ID = 0
+ADMIN_ACCOUNT = "jumpei.irie@pcd-division2"
+DOMAIN_ID = 10201239
 
 # api
-API_ID = "kr1EHxxxxfJVz"
-SERVER_CONSUMER_KEY = "To8SnC7sxxxxxjqXZhO"
+API_ID = "jp1uHFDgNBJdC"
+SERVER_CONSUMER_KEY = "K8q4fsKJ3b1j9k7X_cwK"
 
-SERVER_ID = "96460cc1e778402xxxxxfe35fa97ce76"
-SECRET_KEY_NAME = "private_201xxxxx164308.key"
+SERVER_ID = "e95f0226039f4f189334caa4a17c9f15"
+SECRET_KEY_NAME = "private_20200425080210.key"
 
 # LOCAL ADDRESS
 LOCAL_ADDRESS = "https://[Heroku app name].herokuapp.com/"
