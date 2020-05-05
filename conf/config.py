@@ -36,7 +36,7 @@ SERVER_ID = "e95f0226039f4f189334caa4a17c9f15"
 SECRET_KEY_NAME = "private_20200425080210.key"
 
 # LOCAL ADDRESS
-LOCAL_ADDRESS = "https://[Heroku app name].herokuapp.com/"
+LOCAL_ADDRESS = "https://attendancemanagement.herokuapp.com/"
 
 # DB config
 DB_HOST = "ec2-34-200-72-77.compute-1.amazonaws.com"
