@@ -33,7 +33,7 @@ API_ID = "jp1uHFDgNBJdC"
 SERVER_CONSUMER_KEY = "K8q4fsKJ3b1j9k7X_cwK"
 
 SERVER_ID = "e95f0226039f4f189334caa4a17c9f15"
-SECRET_KEY_NAME = "private_20200425080210.key"
+SECRET_KEY_NAME = "private_20200512152819.key"
 
 # LOCAL ADDRESS
 LOCAL_ADDRESS = "https://attendancemanagement.herokuapp.com/"
