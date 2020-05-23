@@ -179,8 +179,13 @@ def start_attendance_management_bot():
     server.bind(options.port)
     server.start(1)
 
+    print("Start init_logger ")
     init_logger()
+    
+    print("Start init_bot ")
     check_init_bot()
+    
+    print("Start init_rich_menu_first ")
     init_rich_menu_first()
     #init_calendar_first()
 
