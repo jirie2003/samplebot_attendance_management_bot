@@ -189,8 +189,13 @@ def start_attendance_management_bot():
     init_rich_menu_first()
     #init_calendar_first()
 
+    print("Start run_forever ")
     asyncio.get_event_loop().run_forever()
+    
+    print("Start stop ")
     server.stop()
+    
+    print("Start close ")
     asyncio.get_event_loop().close()
 
     print("exit...")
