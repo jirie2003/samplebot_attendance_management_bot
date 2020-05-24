@@ -121,12 +121,15 @@ def init_rich_menu_first():
         reference
         - https://developers.worksmobile.com/jp/document/1005040?lang=en
     """
+    print("init_rich_menu_first:get_init_status")
+   
     extra = get_init_status("rich_menu")
 
     if extra is None:
         rich_menus = init_rich_menu(DEFAULT_LANG)
         insert_init_status("rich_menu", json.dumps(rich_menus))
     else:
+        print("init_rich_menu_first:extra")
         rich_menus = json.loads(extra)
 
     if rich_menus is None:
@@ -135,7 +138,8 @@ def init_rich_menu_first():
     rich_menu_id =rich_menus.get(RICH_MENUS[DEFAULT_LANG]["name"], None)
     if rich_menu_id is None:
         raise Exception("init rich menu failed. rich_menu_id is None")
-
+    
+    print("init_rich_menu_first:global_data.set_value")
     global_data.set_value(DEFAULT_LANG, rich_menu_id)
 
 
