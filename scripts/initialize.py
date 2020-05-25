@@ -23,7 +23,9 @@ from attendance_management_bot.registerBot import init_bot
 
 
 def main():
+    print("main:init_db")
     init_db()
+    print("main:init_bot")
     init_bot()
 
 
