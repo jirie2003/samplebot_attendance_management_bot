@@ -53,7 +53,7 @@ def deal_user_message(account_id, current_date, create_time, message):
     print("deal_user_message:local_date_time")
     date_time = local_date_time(create_time)
 
-    print("deal_user_message:get_status_by_user")
+    print("deal_user_message:get_status_by_user",account_id,current_date)
     content = get_status_by_user(account_id, current_date)
 
     if content is None or content[0] is None:
