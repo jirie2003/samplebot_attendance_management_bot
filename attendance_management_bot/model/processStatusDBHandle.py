@@ -75,7 +75,7 @@ def set_status_by_user_date(account, date, status=None, process=None):
     :param process: processing progress.
     :return: no
     """
-
+    print("set_status_by_user_date")
     condition = "WHERE account='%s' and cur_date='%s'" % (account, date)
 
     update_sql = "UPDATE bot_process_status SET update_time=now()"
@@ -99,7 +99,7 @@ def get_status_by_user(account, date):
     :param date: current date by local time.
     :return: no
     """
-
+    print("get_status_by_user")
     select_sql = "SELECT status, process " \
                  "FROM bot_process_status " \
                  "WHERE account='%s' and cur_date='%s'" \
@@ -124,7 +124,7 @@ def delete_status_by_user_date(account, date):
     :param date: current date by local time.
     :return: no
     """
-
+    print("delete_status_by_user_date")
     delete_status_sql = "UPDATE bot_process_status SET status=NULL, " \
                         "update_time=now() " \
                         "WHERE account='%s' and cur_date='%s'" % \
@@ -143,7 +143,7 @@ def clean_status_by_user(account, date):
     :param date: current date by local time.
     :return: no
     """
-
+    print("clean_status_by_user")
     delete_sql = "DELETE FROM bot_process_status " \
                  "WHERE account='%s' and cur_date='%s' " % (account, date)
 
