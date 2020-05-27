@@ -51,7 +51,7 @@ def image_introduce():
 
     :return: image carousels type message content.
     """
-
+    print("image_introduce")
     fmt = _("Try now")
     action1 = make_i18n_postback_action("a", "start", "Try now", fmt)
     column1 = make_il8n_image_carousel_column(0, action=action1)
