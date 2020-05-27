@@ -91,8 +91,8 @@ class CheckAndHandleActions:
 
             reference
             - https://developers.worksmobile.com/jp/document/100500901?lang=en
-        """
-
+        """  
+        print("★execute+", self.__handle)
         if body is None or "source" not in body or "accountId" \
                 not in body["source"]:
             raise HTTPError(403, "can't find 'accountId' field.")
