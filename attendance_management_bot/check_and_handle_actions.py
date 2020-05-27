@@ -104,11 +104,11 @@ class CheckAndHandleActions:
         if self.__account_id is None:
             raise HTTPError(403, "'accountId' is None.")
 
-        print("★type =",type)
+        #print("★type=",type)
        
         type = body.get("type", "")
         
-        print("★type =",type)
+        #print("★type=",type)
         
         content = body.get("content", None)
         if content is not None:
