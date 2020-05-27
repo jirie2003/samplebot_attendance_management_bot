@@ -60,6 +60,7 @@ def deal_confirm_in(account_id, create_time, callback):
         include the user's check-in time
     :return: Prompt message of successful check in.
     """
+    print("deal_confirm_in")
     pos = callback.find("time=")
     str_time = callback[pos+5:]
     user_time = int(str_time)
@@ -76,14 +77,17 @@ def deal_confirm_in(account_id, create_time, callback):
     cur_time = local_date_time(create_time)
     fmt = _("{account}'s clock-in time on {date}")
     fmt1= _("%A, %B %d")
-
+    
+    print("deal_confirm_in:get_i18n")
     title = get_i18n_content_by_lang(fmt, "confirm_in", DEFAULT_LANG, fmt1=fmt1,
                                      account=get_user_info_by_account(
                                          account_id), date=begin_time)
-
+    
+    print("deal_confirm_in:create_schedule")
     schedule_uid = create_schedule(cur_time, end_time, begin_time,
                                    account_id, title)
 
+    print("deal_confirm_in":set_schedule_by_user)
     set_schedule_by_user(schedule_uid, account_id, current_date,
                          user_time, my_end_time)
 
