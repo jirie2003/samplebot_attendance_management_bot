@@ -43,7 +43,7 @@ def insert_replace_status_by_user_date(account, date, status, process=None):
     :param process: processing progress.
     :return: Return false when status is None Else, Return None
     """
-
+    print("★★★:insert_replace_status_by_user_date")
     if status is None:
         return False
 
