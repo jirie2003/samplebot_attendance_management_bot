@@ -108,6 +108,7 @@ def get_i18n_content_by_lang(fmt, local, lang, **kw):
         date: Local time of datetime object.
     :return: a string.
     """
+    print("get_i18n_content_by_lang：開始")
     local_map = {'en': 'en_US', 'ja': 'ja_JP', 'ko': 'ko_KR'}
     local_text = gettext.translation(local, 'locales', [lang])
 
@@ -132,6 +133,8 @@ def get_i18n_content_by_lang(fmt, local, lang, **kw):
         content = local_text.gettext(fmt)
     locale.setlocale(locale.LC_TIME,
                      "{lang}{code}".format(lang='en_US', code=".utf8"))
+
+    print("get_i18n_content_by_lang:完了")
     return content
 
 
