@@ -104,26 +104,31 @@ class CheckAndHandleActions:
         if self.__account_id is None:
             raise HTTPError(403, "'accountId' is None.")
 
-        #print("★type=",type)
-       
+        
         type = body.get("type", "")
         
-        #print("★type=",type)
-        
+            
         content = body.get("content", None)
+
+        print("★★execute+:", type )
+
         if content is not None:
             self.__content_type = content.get("type", "")
             self.__content_post_back = content.get("postback", "")
             self.__text = content.get("text", None)
 
         if type == "postback":
+            print("★★execute+:postback")
             self.__post_back = body.get("data", "")
 
-        print("self_postback"+ self.__post_back)
+        print("self_postback", self.__content_type)
 
         if type == "message" and self.__content_type == "text" \
                 and self.__content_post_back == "" \
                 and is_message_time(self.__text):
+            
+
+
             self.__user_message = self.__text
             self.__handle = deal_message
 
