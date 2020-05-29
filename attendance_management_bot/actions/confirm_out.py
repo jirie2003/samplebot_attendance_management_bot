@@ -126,8 +126,8 @@ def deal_confirm_out(account_id, create_time, callback):
     title = get_i18n_content_by_lang(fmt, "confirm_out", DEFAULT_LANG, fmt1=fmt1,
                                      account=get_user_info_by_account(
                                          account_id), date=end_time)
-    modify_schedule(schedule_id, cur_time, end_time, begin_time,
-                    account_id, title)
+ #   modify_schedule(schedule_id, cur_time, end_time, begin_time,
+ #                   account_id, title)
 
     modify_schedule_by_user(schedule_id, user_time)
 

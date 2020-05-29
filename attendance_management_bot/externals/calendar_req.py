@@ -236,11 +236,11 @@ def init_calendar():
     """
     init calendar.
     The calendar initialization function is called to generate
-    the calendar id when the system starts.
+    the calendar id when the system stasrts.
 
     :return: calendar id
     """
-    calendar_id = create_calendar()
-    if calendar_id is None:
-        raise Exception("init calendar failed.")
-    return calendar_id
+ #   calendar_id = create_calendar()
+ #   if calendar_id is None:
+ #       raise Exception("init calendar failed.")
+ #   return calendar_id
