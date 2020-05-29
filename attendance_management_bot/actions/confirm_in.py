@@ -108,7 +108,7 @@ def confirm_in(account_id, current_date, create_time, callback):
     :param callback: User triggered callback.
     :return: None
     """
-
+    print("deal_confirm_in")
     content = yield deal_confirm_in(account_id, create_time, callback)
 
     insert_replace_status_by_user_date(account_id, current_date,

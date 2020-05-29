@@ -61,7 +61,7 @@ def manual_sign_in_content(account_id, current_date):
     :param current_date: current date by local time.
     :return: message content list
     """
-
+    print("manual_sign_in_content")
     content = get_status_by_user(account_id, current_date)
 
     if content is not None:

@@ -119,6 +119,8 @@ class CheckAndHandleActions:
         if type == "postback":
             self.__post_back = body.get("data", "")
 
+        print("self_postback"+ self.__post_back)
+
         if type == "message" and self.__content_type == "text" \
                 and self.__content_post_back == "" \
                 and is_message_time(self.__text):
