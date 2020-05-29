@@ -84,8 +84,8 @@ def deal_confirm_in(account_id, create_time, callback):
                                          account_id), date=begin_time)
     
     print("deal_confirm_in:create_schedule")
-    schedule_uid = create_schedule(cur_time, end_time, begin_time,
-                                   account_id, title)
+    #schedule_uid = create_schedule(cur_time, end_time, begin_time,
+    #                               account_id, title)
 
     print("deal_confirm_in:set_schedule_by_user")
     set_schedule_by_user(schedule_uid, account_id, current_date,
