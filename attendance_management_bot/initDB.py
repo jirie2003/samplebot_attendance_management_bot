@@ -185,6 +185,6 @@ def init_db():
     - system_init_status
     - bot_process_status
     """
-    #create_calendar_table()
+    create_calendar_table()
     create_init_status_table()
     create_process_status_table()
