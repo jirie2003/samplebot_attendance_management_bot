@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\attendance_management_bot",
+    "\\attendance_management_bot\\externals",
+    "\\attendance_management_bot\\model"
   ],
-  "SelectedNode": "\\main.py",
+  "SelectedNode": "\\attendance_management_bot\\check_and_handle_actions.py",
   "PreviewInSolutionExplorer": false
 }

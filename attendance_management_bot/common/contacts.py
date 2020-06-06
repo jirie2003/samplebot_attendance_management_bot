@@ -57,6 +57,9 @@ def get_user_info_by_account(account_id):
         "consumerKey": OPEN_API["consumerKey"]
     }
 
+    print("contacts_url",contacts_url)
+    print("headers",headers)
+
     response = auth_post(contacts_url, headers=headers)
     if response.status_code != 200 or response.content is None:
         LOGGER.error("get user info failed. url:%s text:%s body:%s",
