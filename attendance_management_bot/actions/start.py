@@ -112,6 +112,6 @@ def start(account_id, _, __, ___):
 
     :param account_id: user account id.
     """
-    contents = yield start_content(account_id)
+    #contents = yield start_content(account_id)
 
-    yield push_messages(account_id, contents)
+    #yield push_messages(account_id, contents)
