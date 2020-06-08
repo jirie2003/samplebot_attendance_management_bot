@@ -105,6 +105,8 @@ def get_status_by_user(account, date):
                  "WHERE account='%s' and cur_date='%s'" \
                  % (account, date)
 
+    print(select_sql)
+
     row = None
     post_gre = PostGreSql()
     with post_gre as cursor:
