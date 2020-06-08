@@ -51,6 +51,9 @@ def insert_replace_status_by_user_date(account, date, status, process=None):
                  " VALUES('%s', '%s', '%s') ON CONFLICT(account, cur_date) " \
                  "DO UPDATE SET status='%s', update_time=now()" % \
                  (account, date, status, status)
+
+    print(insert_sql)
+
     if process is not None:
         insert_sql = "INSERT INTO bot_process_status(" \
                      "account, cur_date, status, process) " \
@@ -79,6 +82,9 @@ def set_status_by_user_date(account, date, status=None, process=None):
     condition = "WHERE account='%s' and cur_date='%s'" % (account, date)
 
     update_sql = "UPDATE bot_process_status SET update_time=now()"
+
+    print(update_sql)
+
     if status is not None:
         update_sql = "%s , status='%s'" % (update_sql, status,)
     if process is not None:
@@ -132,6 +138,8 @@ def delete_status_by_user_date(account, date):
                         "WHERE account='%s' and cur_date='%s'" % \
                         (account, date)
 
+    print(delete_status_sql)
+
     post_gre = PostGreSql()
     with post_gre as cursor:
         cursor.execute(delete_status_sql)
@@ -148,6 +156,8 @@ def clean_status_by_user(account, date):
     print("clean_status_by_user")
     delete_sql = "DELETE FROM bot_process_status " \
                  "WHERE account='%s' and cur_date='%s' " % (account, date)
+
+    print(delete_sql)
 
     post_gre = PostGreSql()
     with post_gre as cursor:
