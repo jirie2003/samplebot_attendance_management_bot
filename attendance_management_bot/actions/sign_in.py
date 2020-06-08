@@ -60,7 +60,7 @@ def sign_in_content(account_id, current_date):
     :param current_date: current date by local time.
     :retrurn: button type message content
     """
-
+    print("sign_in_content")
     content = get_status_by_user(account_id, current_date)
     process = None
     if content is not None:

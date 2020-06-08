@@ -146,6 +146,7 @@ def make_i18n_button(text, actions, local, fmt):
         - https://developers.worksmobile.com/jp/document/100500804?lang=en
         - Check also: attendance_management_bot/model/data.py::make_button
     """
+    print("make_i18n_button", text)
     i18n_texts = get_i18n_content(fmt, local, function=make_i18n_content_texts)
     return make_button(text, actions, content_texts=i18n_texts)
 
