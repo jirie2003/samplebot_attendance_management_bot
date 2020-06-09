@@ -61,6 +61,7 @@ def upload_content(file_path):
     url = utils.replace_url_bot_no(url)
 
     LOGGER.info("upload content . url:%s", url)
+    print(url)
 
     response = auth_post(url, files=files, headers=headers)
     if response.status_code != 200:

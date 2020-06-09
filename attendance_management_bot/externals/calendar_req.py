@@ -115,6 +115,7 @@ def create_calendar():
     url = API_BO["calendar"]["create_calendar_url"]
     url = url.replace("_ACCOUNT_ID_", ADMIN_ACCOUNT)
     LOGGER.info("create calendar. url:%s body:%s", url, str(body))
+    print(url)
 
     response = auth_post(url, data=json.dumps(body), headers=headers)
     if response.status_code != 200:
@@ -158,6 +159,8 @@ def create_schedule(current, end, begin, account_id, title):
     url = API_BO["calendar"]["create_schedule_url"]
     url = url.replace("_ACCOUNT_ID_", ADMIN_ACCOUNT)
     url = url.replace("_CALENDAR_ID_", calendar_id)
+
+    print(url)
 
     response = auth_post(url, data=json.dumps(body), headers=headers)
     if response.status_code != 200:
