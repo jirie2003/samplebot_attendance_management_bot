@@ -117,6 +117,7 @@ def make_add_rich_menu_body(rich_menu_name):
     url = utils.replace_url_bot_no(url)
 
     LOGGER.info("register richmenu. url:%s", url)
+    print(url)
 
     response = auth_post(url, data=json.dumps(rich_menu), headers=headers)
     if response.status_code != 200:
@@ -150,6 +151,7 @@ def set_rich_menu_image(resource_id, rich_menu_id):
     url = API_BO["rich_menu_url"] + "/" + rich_menu_id + "/content"
     url = utils.replace_url_bot_no(url)
     LOGGER.info("set rich menu image . url:%s", url)
+    print(url)
 
     response = auth_post(url, data=json.dumps(body), headers=headers)
     if response.status_code != 200:
@@ -177,7 +179,7 @@ def set_user_specific_rich_menu(rich_menu_id, account_id):
           + rich_menu_id + "/account/" + account_id
 
     url = utils.replace_url_bot_no(url)
-
+    print(url)
     response = auth_post(url, headers=headers)
     if response.status_code != 200:
         LOGGER.info("push message failed. url:%s text:%s body:%s",
@@ -202,6 +204,7 @@ def get_rich_menus():
     url = utils.replace_url_bot_no(url)
 
     LOGGER.info("push message begin. url:%s", url)
+    print(url)
     response = auth_get(url, headers=headers)
     if response.status_code != 200:
         LOGGER.info("push message failed. url:%s text:%s body:%s",
@@ -231,7 +234,7 @@ def cancel_user_specific_rich_menu(account_id):
     headers["consumerKey"] = OPEN_API["consumerKey"]
     url = API_BO["rich_menu_url"] + "/account/" + account_id
     url = utils.replace_url_bot_no(url)
-
+    print(url)
     response = auth_del(url, headers=headers)
     if response.status_code != 200:
         LOGGER.info("push message failed. url:%s text:%s body:%s",

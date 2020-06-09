@@ -57,8 +57,7 @@ def get_user_info_by_account(account_id):
         "consumerKey": OPEN_API["consumerKey"]
     }
 
-    print("contacts_url",contacts_url)
-    print("headers",headers)
+    print(contacts_url)
 
     response = auth_post(contacts_url, headers=headers)
     if response.status_code != 200 or response.content is None:
