@@ -93,22 +93,22 @@ API_BO = {
             "rich_menu_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
                              + API_ID + "/message/v1/bot/_BOT_NO_/richmenu",
 
-            "calendar":
-            {
-                "name": "calendar bot",
-                "create_calendar_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
-                                       + API_ID +
-                                       "/calendar/v1/_ACCOUNT_ID_/"
-                                       "calendarList",
-                "create_schedule_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
-                                       + API_ID +
-                                       "/calendar/v1/_ACCOUNT_ID_/calendars/"
-                                       "_CALENDAR_ID_/events",
-                "modify_schedule_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
-                                       + API_ID +
-                                       "/calendar/v1/_ACCOUNT_ID_/calendars/"
-                                       "_CALENDAR_ID_/events/_CALENDAR_UUID_",
-            },
+            #"calendar":
+            #{
+            #    "name": "calendar bot",
+            #    "create_calendar_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
+            #                           + API_ID +
+            #                           "/calendar/v1/_ACCOUNT_ID_/"
+            #                           "calendarList",
+            #    "create_schedule_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
+            #                           + API_ID +
+            #                           "/calendar/v1/_ACCOUNT_ID_/calendars/"
+            #                           "_CALENDAR_ID_/events",
+            #    "modify_schedule_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
+            #                           + API_ID +
+            #                           "/calendar/v1/_ACCOUNT_ID_/calendars/"
+            #                           "_CALENDAR_ID_/events/_CALENDAR_UUID_",
+            #},
 
             "TZone":
             {

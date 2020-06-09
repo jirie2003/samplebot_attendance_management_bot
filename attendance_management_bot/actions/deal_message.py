@@ -50,7 +50,6 @@ def deal_user_message(account_id, current_date, create_time, message):
     :param message: User entered message.
     :return: message content
     """
-    print("deal_user_message:local_date_time")
     date_time = local_date_time(create_time)
 
     print("deal_user_message:get_status_by_user",account_id,current_date)

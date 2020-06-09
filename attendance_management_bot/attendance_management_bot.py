@@ -192,7 +192,7 @@ def start_attendance_management_bot():
     print("Start init_rich_menu_first ")
     init_rich_menu_first()
     
-    #print("Start init_calendar_first ")
+    print("Start init_calendar_first ")
     #init_calendar_first()
 
     print("Start run_forever ")
