@@ -64,6 +64,9 @@ def push_message(account_id, content, header=None):
 
     url = API_BO["push_url"]
     url = replace_url_bot_no(url)
+
+    print(url)
+
     response = auth_post(url, data=json.dumps(request), headers=headers)
     if response.status_code != 200:
         LOGGER.error("push message failed. url:%s text:%s body:%s",
