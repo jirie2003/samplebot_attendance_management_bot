@@ -92,7 +92,7 @@ class CheckAndHandleActions:
             reference
             - https://developers.worksmobile.com/jp/document/100500901?lang=en
         """  
-        print("★execute+:self/body", self, body)
+        print("★execute+:self,body", self, body)
         
         if body is None or "source" not in body or "accountId" \
                 not in body["source"]:
@@ -116,8 +116,6 @@ class CheckAndHandleActions:
 
         if type == "postback":
             self.__post_back = body.get("data", "")
-
-        print("self_postback", self.__content_type)
 
         if type == "message" and self.__content_type == "text" \
                 and self.__content_post_back == "" \
