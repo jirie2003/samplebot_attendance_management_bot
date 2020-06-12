@@ -92,7 +92,8 @@ class CheckAndHandleActions:
             reference
             - https://developers.worksmobile.com/jp/document/100500901?lang=en
         """  
-        print("★execute+", self.__handle)
+        print("★execute+:self/body", self, body)
+        
         if body is None or "source" not in body or "accountId" \
                 not in body["source"]:
             raise HTTPError(403, "can't find 'accountId' field.")
@@ -104,13 +105,9 @@ class CheckAndHandleActions:
         if self.__account_id is None:
             raise HTTPError(403, "'accountId' is None.")
 
-        
         type = body.get("type", "")
-        
-            
+                    
         content = body.get("content", None)
-
-        print("★★execute+:", type )
 
         if content is not None:
             self.__content_type = content.get("type", "")
@@ -118,7 +115,6 @@ class CheckAndHandleActions:
             self.__text = content.get("text", None)
 
         if type == "postback":
-            print("★★execute+:postback")
             self.__post_back = body.get("data", "")
 
         print("self_postback", self.__content_type)
@@ -127,8 +123,6 @@ class CheckAndHandleActions:
                 and self.__content_post_back == "" \
                 and is_message_time(self.__text):
             
-
-
             self.__user_message = self.__text
             self.__handle = deal_message
 
